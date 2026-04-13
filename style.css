@@ -1,0 +1,67 @@
+/* GENERAL */
+* {
+    margin: 0;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+}
+:root{
+    --color-1st: #888;
+    --color-2nd: #aaa;
+    --color-3rd: #ddd;
+    --color-4th: rgb(from var(--color-1st) calc(255 - r) calc(255 - g) calc(255 - b));
+    --color-ft1: #fff;
+    --color-ft2: #000;
+}
+::selection{
+    background-color: var(--color-4th);
+}
+/* DOCUMENT */
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header{
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    font-size: 2.2em;
+    
+}
+main{
+    margin-top: 10vh;
+    flex-grow: 1;
+    width: 100%;
+    height: 200vh;
+}
+footer{
+    justify-content: space-around;
+}
+header, footer {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--color-1st);
+}
+
+/* CUSTOM IN DOCUMENT */
+.hf-btn{
+    height: 100%;
+    aspect-ratio: 1;
+    border: none;
+    background: var(--color-2nd);
+    color: var(--color-ft1);
+    transition: 0.3s;
+}
+.hf-a{
+    color: var(--color-ft1);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+.hf-a:hover, .hf-btn:hover{
+    scale: 1.2;
+}
