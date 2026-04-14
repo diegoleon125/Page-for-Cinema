@@ -2,27 +2,29 @@ class MyHeader extends HTMLElement {
     connectedCallback(){
         this.innerHTML =`
         <header>
-            <button id="side-menu" class="page-btn">|||</button>
-            <a class="page-a" href="/Cine----">Titulo interesante</a>
-            <button id="cart" class="page-btn">cart</button>
+            <button id="side-menu" class="page-btn">&#9776;</button>
+            <a id="title-menu" class="page-a" href="/EcoCine/">EcoCine</a>
+            <button id="cart" class="page-btn">
+                <i class="fi fi-rr-shopping-cart"></i>
+            </button>
         </header>
         <div id="page-overlay"></div>
         <aside id="page-menu">
             <ul class="page-list">
                 <li>
-                    <a class="page-a" href="/Cine----/peliculas">Películas</a>
+                    <a class="page-a" href="/EcoCine/peliculas">Películas</a>
                 </li>
                 <li>
-                    <a class="page-a" href="/Cine----/cines">Cines</a>
+                    <a class="page-a" href="/EcoCine/cines">Cines</a>
                 </li>
                 <li>
-                    <a class="page-a" href="/Cine----/dulceria">Dulcería</a>
+                    <a class="page-a" href="/EcoCine/dulceria">Dulcería</a>
                 </li>
                 <li>
-                    <a class="page-a" href="/Cine----/promociones">Promociones</a>
+                    <a class="page-a" href="/EcoCine/promociones">Promociones</a>
                 </li>
                 <li>
-                    <a class="page-a" href="/Cine----/contactanos">Contáctanos</a>
+                    <a class="page-a" href="/EcoCine/contactanos">Contáctanos</a>
                 </li>
             </ul>
         </aside>
@@ -47,9 +49,9 @@ class MyFooter extends HTMLElement {
     connectedCallback(){
         this.innerHTML =`
         <footer>
-            <a class="page-a" href="/Cine----/acerca-de-nosotros">Acerca de nosotros</a>
-            Pie de pagina
-            <a class="page-a" href="/Cine----/contactanos">Contáctanos</a>
+            <a class="page-a" href="/EcoCine/acerca-de-nosotros">Acerca de nosotros</a>
+                Proyecto para desarrollo web
+            <a class="page-a" href="/EcoCine/contactanos">Contáctanos</a>
         </footer>
         `;
     }

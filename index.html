@@ -1,18 +1,67 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>CINE----</title>
+        <title>EcoCine</title>
         <link rel="stylesheet" href="./style.css">
-
-        <script src="./main.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     </head>
     <body>
-        <custom-header></custom-header>
+        <header>
+            <button id="side-menu" class="page-btn">&#9776;</button>
+            <a id="title-menu" class="page-a" href="./">EcoCine</a>
+            <button id="cart" class="page-btn">
+                <i class="fi fi-rr-shopping-cart"></i>
+            </button>
+        </header>
+        <div id="page-overlay"></div>
+        <aside id="page-menu">
+            <ul class="page-list">
+                <li>
+                    <a class="page-a" href="./peliculas">Películas</a>
+                </li>
+                <li>
+                    <a class="page-a" href="./cines">Cines</a>
+                </li>
+                <li>
+                    <a class="page-a" href="./dulceria">Dulcería</a>
+                </li>
+                <li>
+                    <a class="page-a" href="./promociones">Promociones</a>
+                </li>
+                <li>
+                    <a class="page-a" href="./contactanos">Contáctanos</a>
+                </li>
+            </ul>
+        </aside>
 
         <main>
             Contenido
         </main>
 
-        <custom-footer></custom-footer>
+        <footer>
+            <a class="page-a" href="/EcoCine/acerca-de-nosotros">Acerca de nosotros</a>
+                Proyecto para desarrollo web
+            <a class="page-a" href="/EcoCine/contactanos">Contáctanos</a>
+        </footer>
+
+        <script>
+            const bdy = document.querySelector("body");
+            const btn_menu = bdy.querySelector("#side-menu");
+            const menu = bdy.querySelector("#page-menu");
+            const overlay = bdy.querySelector("#page-overlay");
+            const btn_cart = bdy.querySelector("#cart");
+
+            btn_menu.onclick = () => {
+                menu.classList.toggle("active");
+                overlay.classList.toggle("active");
+            };
+            overlay.onclick = () => {
+                menu.classList.toggle("active");
+                overlay.classList.toggle("active");
+            };
+        </script>
     </body>
 </html>
