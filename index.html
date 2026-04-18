@@ -2,12 +2,12 @@
     <head>
         <meta charset="UTF-8">
         <title>EcoCine</title>
-        <link rel="stylesheet" href="./style.css">
-        <link rel="icon" href="/EcoCine/src/icon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <link rel="stylesheet" href="/EcoCine/style.css">
+        <link rel="icon" href="/EcoCine/src/icon.png">
     </head>
     <body>
         <div id="page-overlay"></div>
@@ -33,7 +33,9 @@
         <div id="header-space"></div>
         <header>
             <button id="side-menu" class="page-btn icon">&#9776;</button>
-            <a id="title-menu" class="page-a" href="./">EcoCine</a>
+            <a id="title-menu" class="page-a" href="./">
+                <span id="eco">Eco</span>Cine
+            </a>
             <button id="cart" class="page-btn icon">
                 <i class="fi fi-rr-shopping-cart"></i>
             </button>
@@ -42,22 +44,65 @@
         <div id="banner">
             <div id="banner-fade"></div>
             <img id="banner-img" src="/EcoCine/src/banner.jpg" alt="banner">
-            
         </div>
+        
         <main>
-            <article id="card-movies" class="main-child">
-                <img class="flex-movie" src="/EcoCine/src/.jpg" alt="movie1">
-                <img class="flex-movie" src="/EcoCine/src/.jpg" alt="movie2">
-                <img class="flex-movie" src="/EcoCine/src/.jpg" alt="movie3">
+            <h1>TOP DE LA SEMANA</h1>
+            <article id="card-movies">
+                <a class="flex-movie" href="/EcoCine/peliculas/pelicula/">
+                    <img src="/EcoCine/src/.jpg" alt="movie1">
+                </a>
+                <a class="flex-movie" href="/EcoCine/peliculas/pelicula/">
+                    <img src="/EcoCine/src/.jpg" alt="movie2">
+                </a>
+                <a class="flex-movie" href="/EcoCine/peliculas/pelicula/">
+                    <img src="/EcoCine/src/.jpg" alt="movie3">
+                </a>
             </article>
-            <article class="card main-child">
-
-            </article>
+            <a class="card card-reverse" href="/EcoCine/peliculas/">
+                <img src="/EcoCine/src/.jpg" alt="Películas">
+                <div>
+                    <h1>Películas</h1><br><br>
+                    <h3>
+                        "Encuentra el título perfecto para hoy y disfruta de una función inolvidable.<br>
+                        Elige tu historia favorita y deja que la magia del cine haga el resto."
+                    </h3>
+                </div>
+            </a>
+            <a class="card" href="/EcoCine/cines/">
+                <img src="/EcoCine/src/.jpg" alt="Cines">
+                <div>
+                    <h1>Cines</h1><br><br>
+                    <h3>
+                        "Encuentra la sede más cercana y disfruta de la mejor tecnología en cada sala.<br>
+                        Vive una experiencia única con la comodidad y el sonido que solo nosotros te ofrecemos."
+                    </h3>
+                </div>
+            </a>
+            <a class="card card-reverse" href="/EcoCine/dulceria/">
+                <img src="/EcoCine/src/.jpg" alt="Dulcería">
+                <div>
+                    <h1>Dulcería</h1><br><br>
+                    <h3>
+                        "Acompaña tu función con el sabor inigualable de nuestras palomitas y snacks favoritos.<br>
+                        Haz que cada escena sea más especial disfrutando de tus antojos preferidos."
+                    </h3>
+                </div>
+            </a>
+            <a class="card" href="/EcoCine/promociones/">
+                <img src="/EcoCine/src/.jpg" alt="Promociones">
+                <div>
+                    <h1>Promociones</h1><br><br>
+                    <h3>
+                        "Encuentra el título perfecto para hoy y disfruta de una función inolvidable.<br>
+                        No dejes pasar los beneficios especiales que tenemos preparados para ti hoy."
+                    </h3>
+                </div>
+            </a>
         </main>
 
         <footer>
             <a class="page-a" href="/EcoCine/acerca-de-nosotros">Acerca de nosotros</a>
-                Proyecto para desarrollo web
             <a class="page-a" href="/EcoCine/contactanos">Contáctanos</a>
         </footer>
 

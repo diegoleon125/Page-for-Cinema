@@ -24,7 +24,9 @@ class MyHeader extends HTMLElement {
         <div id="header-space"></div>
         <header>
             <button id="side-menu" class="page-btn icon">&#9776;</button>
-            <a id="title-menu" class="page-a" href="/EcoCine">EcoCine</a>
+            <a id="title-menu" class="page-a" href="/EcoCine">
+                <span id="eco">Eco</span>Cine
+            </a>
             <button id="cart" class="page-btn icon">
                 <i class="fi fi-rr-shopping-cart"></i>
             </button>
@@ -51,7 +53,6 @@ class MyFooter extends HTMLElement {
         this.innerHTML =`
         <footer>
             <a class="page-a" href="/EcoCine/acerca-de-nosotros">Acerca de nosotros</a>
-                Proyecto para desarrollo web
             <a class="page-a" href="/EcoCine/contactanos">Contáctanos</a>
         </footer>
         `;

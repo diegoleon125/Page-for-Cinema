@@ -5,10 +5,11 @@
     font-family: 'Trebuchet MS';
 }
 :root{
-    --color-1st: #72b2a1;
-    --color-2nd: #abd58b;
-    --color-3rd: #d5fcb6;
-    --color-4th: rgb(from var(--color-1st) 0 calc(255 - g) calc(255 - b));
+    --color-1st: #2b052d;
+    --color-2nd: #5b2578;
+    --color-3rd: #72b2a1;
+    --color-4th: #4fe8c2;
+    --color-5th: #caffc2;
     --color-ft1: #fff;
     --color-ft2: #000;
 }
@@ -22,6 +23,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: var(--color-5th);
 }
 header{
     justify-content: space-between;
@@ -35,8 +37,12 @@ main{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 200vh;
-    background-color: var(--color-3rd);
+    min-height: 80vh;
+    color: var(--color-ft2);
+}
+main > *{
+    margin: 5vh;
+    width: calc(100% - 10vh);
 }
 footer{
     justify-content: space-around;
@@ -50,11 +56,26 @@ header, footer {
     background-color: var(--color-1st);
 }
 
+/* COMMON ELEMENTS */
+main > h1{
+    margin: 5vh 5vh 0 5vh;
+}
+img{
+    user-select: none;
+}
+a{
+    text-decoration: none;
+    color: var(--color-ft1);
+}
 
 /* PAGE CONTENT */
 #title-menu{
     font-family: "Pacifico";
     font-weight: normal;
+}
+#eco {
+    font-family: "Pacifico";
+    color: var(--color-3rd);
 }
 #header-space{
     height: 10vh;
@@ -100,9 +121,7 @@ header, footer {
     transition: 0.3s;
 }
 .page-a{
-    color: var(--color-ft1);
     font-weight: bold;
-    text-decoration: none;
     transition: 0.3s;
 }
 .page-a:hover, .page-btn:hover{
@@ -122,37 +141,73 @@ li::marker{
 #banner{
     width: 100%;
     aspect-ratio: 3;
-    background-color: var(--color-3rd);
 }
 #banner-fade{
     position: absolute;
     top: 10vh;
     z-index: 800;
     width: 100%;
+    opacity: 0.8;
     aspect-ratio: 3;
-    background: linear-gradient(to bottom,transparent 0%, transparent 30%, var(--color-3rd) 100%);
+    background: linear-gradient(
+        to bottom,
+        var(--color-1st) 0%,
+        transparent 10%,
+        transparent 30%,
+        var(--color-1st) 100%);
 }
 #banner-img{
     width: 100%;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 #card-movies{
     aspect-ratio: 2;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
-.main-child{
-    margin: 5vh;
-    width: calc(100% - 10vh);
+.flex-movie{
+    margin: 1vh;
+    aspect-ratio: 2/3;
+    background-color: var(--color-3rd); /*edit*/
+    transition: 0.3s;
 }
+.flex-movie:hover{
+    scale: 1.08;
+}
+
 .card{
     aspect-ratio: 2.5;
-    background: var(--color-2nd);
-    border: dashed 0.5vh var(--color-1st);
+    display: flex;
+    justify-content: space-between;
+    background: var(--color-3rd);
+    border: dashed 0.5vh var(--color-ft2);
     border-radius: 2vh;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.card-reverse{
+    flex-direction: row-reverse;
+}
+.card *{
+    flex: 1;
+}
+.card :not(img) {
+    margin: 1vh;
+}
+.card div{
+    aspect-ratio: 5/3;
+}
+.card div h3{
+    text-align: left;
+}
+.card img{
+    /*edit*/
+    background-color: var(--color-2nd);
+}
+.card:hover{
+    scale: 1.05;
 }
 
 /* HORIZONTALL */
