@@ -10,12 +10,32 @@
         <link rel="stylesheet" href="/EcoCine/style.css">
         <link rel="icon" href="/EcoCine/src/icon.png">
         <script src="/EcoCine/main.js" defer></script>
+        <script type="module" src="./script.js"></script>
     </head>
     <body>
         <custom-header></custom-header>
 
         <main>
-            Cines
+            <h1>CINES</h1>
+            <h2>Elija su cine antes de buscar horarios!</h2>
+            <article id="grid-cinemas">
+                <button onclick="setCinema('SJL')">
+                    <img src="/EcoCine/cines/.jpg" alt="SJL">
+                    <h2>SJL</h2>
+                </button>
+                <button onclick="setCinema('Campoy')">
+                    <img src="/EcoCine/cines/.jpg" alt="Campoy">
+                    <h2>Campoy</h2>
+                </button>
+                <button onclick="setCinema('LimaCentro')">
+                    <img src="/EcoCine/cines/.jpg" alt="LimaCentro">
+                    <h2>Lima Centro</h2>
+                </button>
+                <!-- Solo para pruebas-->
+                <button onclick="clearCinema()" style="aspect-ratio: 3;">
+                    borrar cine
+                </button>
+            </article>
         </main>
 
         <custom-footer></custom-footer>

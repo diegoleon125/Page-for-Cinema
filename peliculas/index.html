@@ -10,12 +10,33 @@
         <link rel="stylesheet" href="/EcoCine/style.css">
         <link rel="icon" href="/EcoCine/src/icon.png">
         <script src="/EcoCine/main.js" defer></script>
+        <script type="module" src="./script.js"></script>
     </head>
     <body>
         <custom-header></custom-header>
 
         <main>
-            Películas
+            <h1>PELÍCULAS</h1>
+            <article id="grid-movies">
+                <button class="btn-movie" onclick="setPelicula(1)">
+                    <img src="/EcoCine/src/.jpg" alt="movie1">
+                </button>
+                <button class="btn-movie" onclick="setPelicula(2)">
+                    <img src="/EcoCine/src/.jpg" alt="movie2">
+                </button>
+                <button class="btn-movie" onclick="setPelicula(3)">
+                    <img src="/EcoCine/src/.jpg" alt="movie3">
+                </button>
+                <button class="btn-movie" onclick="setPelicula(4)">
+                    <img src="/EcoCine/src/.jpg" alt="movie4">
+                </button>
+                <button class="btn-movie" onclick="setPelicula(5)">
+                    <img src="/EcoCine/src/.jpg" alt="movie5">
+                </button>
+                <button class="btn-movie" onclick="setPelicula(6)">
+                    <img src="/EcoCine/src/.jpg" alt="movie6">
+                </button>
+            </article>
         </main>
 
         <custom-footer></custom-footer>

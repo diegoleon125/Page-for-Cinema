@@ -12,52 +12,64 @@
     <body>
         <div id="page-overlay"></div>
         <aside id="page-menu">
-            <ul class="page-list">
+            <ul>
                 <li>
-                    <a class="page-a" href="./peliculas">Películas</a>
+                    <a class="page-a" href="/EcoCine/peliculas">Películas</a>
                 </li>
                 <li>
-                    <a class="page-a" href="./cines">Cines</a>
+                    <a class="page-a" href="/EcoCine/cines">Cines</a>
                 </li>
                 <li>
-                    <a class="page-a" href="./dulceria">Dulcería</a>
+                    <a class="page-a" href="/EcoCine/dulceria">Dulcería</a>
                 </li>
                 <li>
-                    <a class="page-a" href="./promociones">Promociones</a>
+                    <a class="page-a" href="/EcoCine/promociones">Promociones</a>
                 </li>
                 <li>
-                    <a class="page-a" href="./contactanos">Contáctanos</a>
+                    <a class="page-a" href="/EcoCine/contactanos">Contáctanos</a>
                 </li>
             </ul>
         </aside>
         <div id="header-space"></div>
         <header>
-            <button id="side-menu" class="page-btn icon">&#9776;</button>
-            <a id="title-menu" class="page-a" href="./">
-                <span id="eco">Eco</span>Cine
-            </a>
-            <button id="cart" class="page-btn icon">
-                <i class="fi fi-rr-shopping-cart"></i>
+            <button id="side-menu" class="page-btn icon">
+                &#9776;
             </button>
+            <a id="title-menu" class="page-a" href="/EcoCine">
+                <span>Eco</span>Cine
+            </a>
+            <div id="page-dropdown">
+                <button id="cart" class="page-btn icon">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                </button>
+                <ul>
+                    <li>
+                        <button class="page-a">Vaciar carrito</button>
+                    </li>
+                    <li>
+                        <a class="page-a page-a-btn" href="/EcoCine/pagar">Procesar compra</a>
+                    </li>
+                </ul>
+            </div>
         </header>
 
         <div id="banner">
-            <div id="banner-fade"></div>
-            <img id="banner-img" src="/EcoCine/src/banner.jpg" alt="banner">
+            <div></div>
+            <img src="/EcoCine/src/banner.jpg" alt="banner">
         </div>
         
         <main>
             <h1>TOP DE LA SEMANA</h1>
-            <article id="card-movies">
-                <a class="flex-movie" href="/EcoCine/peliculas/pelicula/">
+            <article id="flex-movies">
+                <button class="btn-movie" onclick="setPelicula(1)">
                     <img src="/EcoCine/src/.jpg" alt="movie1">
-                </a>
-                <a class="flex-movie" href="/EcoCine/peliculas/pelicula/">
+                </button>
+                <button class="btn-movie" onclick="setPelicula(2)">
                     <img src="/EcoCine/src/.jpg" alt="movie2">
-                </a>
-                <a class="flex-movie" href="/EcoCine/peliculas/pelicula/">
+                </button>
+                <button class="btn-movie" onclick="setPelicula(3)">
                     <img src="/EcoCine/src/.jpg" alt="movie3">
-                </a>
+                </button>
             </article>
             <a class="card card-reverse" href="/EcoCine/peliculas/">
                 <img src="/EcoCine/src/.jpg" alt="Películas">
@@ -106,7 +118,8 @@
             <a class="page-a" href="/EcoCine/contactanos">Contáctanos</a>
         </footer>
 
-        <script>
+        <script type="module">
+            import {Reserva} from "/EcoCine/scripts/Reserva.js";
             const bdy = document.querySelector("body");
             const btn_menu = bdy.querySelector("#side-menu");
             const menu = bdy.querySelector("#page-menu");
@@ -121,6 +134,16 @@
                 menu.classList.toggle("active");
                 overlay.classList.toggle("active");
             };
+
+            
+            function setPelicula(id){
+                const r = new Reserva();
+                r.movie_id = id;
+                r.seats_ids = [];
+                r.guardarReserva();
+                window.location.href = "/EcoCine/peliculas/pelicula";
+            }
+            window.setPelicula = setPelicula;
         </script>
     </body>
 </html>

@@ -1,1 +1,8 @@
 - promo descartable descuento x botella
+
+
+COMMON:
+cinema : String
+movie_id : int
+seats_ids = int[]
+combos_ids = int[]

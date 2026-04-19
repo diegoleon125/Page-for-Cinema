@@ -3,7 +3,7 @@ class MyHeader extends HTMLElement {
         this.innerHTML =`
         <div id="page-overlay"></div>
         <aside id="page-menu">
-            <ul class="page-list">
+            <ul>
                 <li>
                     <a class="page-a" href="/EcoCine/peliculas">Películas</a>
                 </li>
@@ -23,13 +23,25 @@ class MyHeader extends HTMLElement {
         </aside>
         <div id="header-space"></div>
         <header>
-            <button id="side-menu" class="page-btn icon">&#9776;</button>
-            <a id="title-menu" class="page-a" href="/EcoCine">
-                <span id="eco">Eco</span>Cine
-            </a>
-            <button id="cart" class="page-btn icon">
-                <i class="fi fi-rr-shopping-cart"></i>
+            <button id="side-menu" class="page-btn icon">
+                &#9776;
             </button>
+            <a id="title-menu" class="page-a" href="/EcoCine">
+                <span>Eco</span>Cine
+            </a>
+            <div id="page-dropdown">
+                <button id="cart" class="page-btn icon">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                </button>
+                <ul>
+                    <li>
+                        <button class="page-a">Vaciar carrito</button>
+                    </li>
+                    <li>
+                        <a class="page-a page-a-btn" href="/EcoCine/pagar">Procesar compra</a>
+                    </li>
+                </ul>
+            </div>
         </header>
         `;
 
