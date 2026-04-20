@@ -72,7 +72,7 @@
                     <img src="/EcoCine/src/.jpg" alt="movie3">
                 </button>
             </article>
-            <a class="card card-reverse" href="/EcoCine/peliculas/">
+            <a class="card card-1 card-reverse" href="/EcoCine/peliculas/">
                 <img src="/EcoCine/src/.jpg" alt="Películas">
                 <div>
                     <h1>Películas</h1><br><br>
@@ -82,7 +82,7 @@
                     </h3>
                 </div>
             </a>
-            <a class="card" href="/EcoCine/cines/">
+            <a class="card card-1" href="/EcoCine/cines/">
                 <img src="/EcoCine/src/.jpg" alt="Cines">
                 <div>
                     <h1>Cines</h1><br><br>
@@ -92,7 +92,7 @@
                     </h3>
                 </div>
             </a>
-            <a class="card card-reverse" href="/EcoCine/dulceria/">
+            <a class="card card-1 card-reverse" href="/EcoCine/dulceria/">
                 <img src="/EcoCine/src/.jpg" alt="Dulcería">
                 <div>
                     <h1>Dulcería</h1><br><br>
@@ -102,7 +102,7 @@
                     </h3>
                 </div>
             </a>
-            <a class="card" href="/EcoCine/promociones/">
+            <a class="card card-1" href="/EcoCine/promociones/">
                 <img src="/EcoCine/src/.jpg" alt="Promociones">
                 <div>
                     <h1>Promociones</h1><br><br>
@@ -143,12 +143,13 @@
                 cart_output.classList.add("fade-out");
             };
             cart_pay.onclick = () => {
+                /*
                 if (r.is_empty()){
                     cart_output.innerHTML = "Debe añadir compras al carrito primero!";
                     cart_output.classList.add("fade-out");
-                } else {
+                } else { */
                     window.location.href = "/EcoCine/pagar";
-                }
+                //}
             };
             cart_output.addEventListener("animationend", () => {
                 cart_output.innerHTML = "";

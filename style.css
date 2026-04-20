@@ -227,32 +227,39 @@ li::marker{
 }
 
 .card{
-    aspect-ratio: 2.5;
     display: flex;
-    justify-content: space-between;
     background: var(--color-3rd);
     border: dashed 0.5vh var(--color-ft2);
     border-radius: 2vh;
     overflow: hidden;
     transition: 0.3s;
 }
-.card-reverse{
-    flex-direction: row-reverse;
+.card * {
+    margin: 1vh;
 }
 .card:hover{
     scale: 1.05;
 }
-.card > *{
-    flex: 1;
-    margin: 1vh;
+.card-reverse{
+    flex-direction: row-reverse;
 }
-.card > div{
+.card-column{
+    flex-direction: column;
+}
+.card-1{
+    aspect-ratio: 2.5;
+    justify-content: space-between;
+}
+.card-1 > * {
+    flex: 1;
+}
+.card-1 > div{
     aspect-ratio: 5/3;
 }
-.card > div > h3{
+.card-1 > div > h3{
     text-align: left;
 }
-.card > img{
+.card-1 > img{
     /*edit*/
     border-radius: 1vh;
     background-color: var(--color-2nd);
@@ -293,13 +300,6 @@ li::marker{
     background-color: var(--color-4th);
 }
 
-/* PAGAR */
-#grid-cartlist{
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
-    min-height: 5em;
-    background-color: var(--color-3rd);
-}
 /* CINES */
 #grid-cinemas{
     display: grid;
@@ -317,6 +317,29 @@ li::marker{
 }
 #grid-cinemas > button:hover{
     scale: 1.1;
+}
+/* PAGAR */
+#table-cartlist{
+    min-height: 5em;
+    background-color: var(--color-3rd);
+}
+#table-cartlist tr > * {
+    border: 0.2rem solid var(--color-1st);
+    height: 3em;
+    font-size: 1rem;
+}
+#table-cartlist tr > th:first-child, td:first-child{
+    width: 50%;
+}
+#table-cartlist button {
+    background-color: var(--color-2nd);
+    font-size: 2.2em;
+}
+#promo-input{
+    width: 12em;
+}
+#promo-submit{
+    color: var(--color-ft2);
 }
 /* HORIZONTALL */
 @media (min-aspect-ratio: 4/5) {

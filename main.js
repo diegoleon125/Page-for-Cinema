@@ -85,12 +85,13 @@ document.addEventListener("DOMContentLoaded", () => {
         cart_output.classList.add("fade-out");
     };
     cart_pay.onclick = () => {
-        if (r.is_empty()){
+        /* if (r.is_empty()){
             cart_output.innerHTML = "Debe añadir compras al carrito primero!";
             cart_output.classList.add("fade-out");
         } else {
+            */
             window.location.href = "/EcoCine/pagar";
-        }
+        //}
     };
     cart_output.addEventListener("animationend", () => {
         cart_output.innerHTML = "";
