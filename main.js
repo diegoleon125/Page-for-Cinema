@@ -2,7 +2,7 @@ class MyHeader extends HTMLElement {
     connectedCallback(){
         this.innerHTML =`
         <div id="page-overlay"></div>
-        <aside id="page-menu">
+        <nav id="page-menu">
             <ul>
                 <li>
                     <a class="page-a" href="/EcoCine/peliculas">Películas</a>
@@ -20,14 +20,14 @@ class MyHeader extends HTMLElement {
                     <a class="page-a" href="/EcoCine/contactanos">Contáctanos</a>
                 </li>
             </ul>
-        </aside>
+        </nav>
         <div id="header-space"></div>
         <header>
             <button id="side-menu" class="page-btn icon">
                 &#9776;
             </button>
-            <a id="title-menu" class="page-a" href="/EcoCine">
-                <span>Eco</span>Cine
+            <a class="page-a" href="/EcoCine">
+                <img id="title-menu" src="/EcoCine/src/logo.png" alt="titulo">
             </a>
             <div id="page-dropdown">
                 <button id="cart" class="page-btn icon">

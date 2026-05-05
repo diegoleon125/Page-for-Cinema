@@ -5,11 +5,11 @@
     font-family: 'Trebuchet MS';
 }
 :root{
-    --color-1st: #2b052d;
-    --color-2nd: #5b2578;
-    --color-3rd: #72b2a1;
+    --color-1st: #062914;
+    --color-2nd: #2d7825;
+    --color-3rd: #8EC247;
     --color-4th: #4fe8c2;
-    --color-5th: #caffc2;
+    --color-5th: #e7ffe4;
     --color-ft1: #fff;
     --color-ft2: #000;
 }
@@ -19,6 +19,9 @@
 
 
 /* DOCUMENT */
+html{
+    scroll-behavior: smooth;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -26,38 +29,30 @@ body{
     background-color: var(--color-5th);
 }
 header{
-    justify-content: space-between;
+    display: flex;
     position: fixed;
+    justify-content: space-between;
+    align-items: center;
     top: 0;
     z-index: 1000;
+    height: 10vh;
 }
 main{
     display: flex;
     flex-direction: column;
     width: clamp(0px,100%,150vh);
-    margin: auto;
     min-height: 80vh;
+    margin: auto;
     color: var(--color-ft2);
 }
-main > *{
-    margin: 5vh;
-    width: calc(100% - 10vh);
-}
-footer{
-    justify-content: space-around;
-}
 header, footer {
-    display: flex;
-    align-items: center;
     user-select: none;
     width: 100%;
-    height: 10vh;
     background-color: var(--color-1st);
 }
 
-/* COMMON ELEMENTS */
-main > h1{
-    margin: 5vh 5vh 0 5vh;
+h1 {
+    color: var(--color-2nd);
 }
 img{
     user-select: none;
@@ -69,23 +64,20 @@ a{
 button {
     color: var(--color-ft1);
 }
-li::marker{
-    color: var(--color-1st);
+li {
+    list-style-type: ">";
 }
-
-/* PAGE CONTENT */
+li::marker{
+    color: var(--color-3rd);
+    font-weight: bolder;
+}
+/* HEADER */
+#title-menu{
+    height: 3em;
+}
 #header-space{
     height: 10vh;
     width: 100%;
-}
-#title-menu{
-    font-family: "Pacifico";
-    font-weight: normal;
-    font-size: 2.2em;
-}
-#title-menu > span {
-    font-family: "Pacifico";
-    color: var(--color-3rd);
 }
 
 #page-overlay{
@@ -102,6 +94,7 @@ li::marker{
     pointer-events: auto;
     opacity: 0.6;
 }
+
 #page-menu{
     position: fixed;
     z-index: 1200;
@@ -115,18 +108,18 @@ li::marker{
     left: 0;
 }
 #page-menu > ul{
-    margin: 5vh 0;
     display: flex;
+    margin: 5vh 0;
     flex-direction: column;
     gap: 5vh;
 }
+
 #page-dropdown > ul{
     pointer-events: none;
-    list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 2vh;
     position:absolute;
+    gap: 2vh;
     top: 10vh;
     right: 0;
     width: 22vh;
@@ -141,6 +134,10 @@ li::marker{
     pointer-events: all;
     opacity: 1;
 }
+.fade-out{
+    animation: fadeout 1s forwards;
+    animation-delay: 2s;
+}
 #cart-output{
     position: absolute;
     top: 25vh;
@@ -151,39 +148,83 @@ li::marker{
         0 0 0.1em var(--color-ft2);
     transition: 5s;
 }
-.fade-out{
-    animation: fadeout 1s forwards;
-    animation-delay: 2s;
+/* MAIN */
+main > *{
+    margin: 2vh 5vw;
+    width: calc(100% - 10vh);
 }
+main > h1{
+    margin: 5vh 5vh 0 5vh;
+}
+#btn-return-top{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    bottom: 1vw;
+    right: 1vw;
+    height: 2em;
+    border-radius: 40%;
+}
+
+/* FOOTER */
+footer * {
+    color: var(--color-ft1);
+}
+footer > section {
+    display: flex;
+    justify-content: space-around;
+    min-height: 10vh;
+}
+footer > :nth-child(2){
+    align-items: center;
+}
+footer > section > section {
+    margin: 1em;
+    flex: 1;
+    text-align: left;
+
+}
+footer > section > section * {
+    margin: 0.5em 0;
+    text-align: left;
+}
+#footer-list > li{
+    text-align: left;
+    padding: 0 1em;
+}
+/* common elements */
 .icon {
     font-size: 2.2em;
+    aspect-ratio: 1;
+}
+.logo{
+    height: 2em;
 }
 .page-btn{
     cursor: pointer;
-    height: 100%;
-    aspect-ratio: 1;
-    border: none;
-    background-color: transparent;
+    border: 1px solid var(--color-ft1);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    background: none;
     color: var(--color-ft1);
     transition: 0.3s;
 }
+.header-btn {
+    border: none;
+    height: 100%;
+    padding: 0;
+}
 .page-a{
     display: inline-block;
-    cursor: pointer;
-    font-weight: bold;
     transition: 0.3s;
-    border: none;
-    background-color: transparent;
-}
-.page-a-btn{
-    padding: 0.5em;
-    border: 0.5vh dashed var(--color-1st);
-    border-radius: 2vh;
-    background-color: var(--color-3rd);
 }
 .page-a:hover, .page-btn:hover{
-    scale: 1.2;
+    transform: scale(1.2);
 }
+.bg-1{background-color: var(--color-1st);}
+.bg-2{background-color: var(--color-2nd);}
 
 /* INDEX CONTENT*/
 #banner{
@@ -247,7 +288,7 @@ li::marker{
     flex-direction: column;
 }
 .card-1{
-    aspect-ratio: 2.5;
+    max-height: 50vw;
     justify-content: space-between;
 }
 .card-1 > * {
